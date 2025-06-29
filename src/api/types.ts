@@ -104,3 +104,75 @@ export interface ISetRateRequest {
     ratingScore: number,
 }
 
+// User Gender Enum
+export enum UserGender {
+    MALE = 'Male',
+    FEMALE = 'Female'
+}
+
+// Order Status Enum
+export enum OrderStatus {
+    PENDING = 'Pending',
+    CONFIRMED = 'Confirmed',
+    PREPARING = 'Preparing',
+    DELIVERING = 'Delivering',
+    DELIVERED = 'Delivered',
+    CANCELLED = 'Cancelled'
+}
+
+// Dish Categories Enum
+export enum DishCategory {
+    MAIN = 'Main',
+    APPETIZER = 'Appetizer',
+    DESSERT = 'Dessert',
+    BEVERAGE = 'Beverage',
+    SALAD = 'Salad',
+    SOUP = 'Soup'
+}
+
+// Sorting Options Enum
+export enum SortOption {
+    NAME_ASC = 'nameAsc',
+    NAME_DESC = 'nameDesc',
+    PRICE_ASC = 'priceAsc',
+    PRICE_DESC = 'priceDesc',
+    RATING_DESC = 'ratingDesc'
+}
+
+// API Response Types
+export interface ApiResponse<T> {
+    data: T;
+    message?: string;
+    success: boolean;
+}
+
+export interface ApiError {
+    message: string;
+    status: number;
+    errors?: Record<string, string[]>;
+}
+
+// Form Validation Types
+export interface ValidationError {
+    field: string;
+    message: string;
+}
+
+export interface FormValidation {
+    isValid: boolean;
+    errors: ValidationError[];
+}
+
+// UI State Types
+export interface LoadingState {
+    isLoading: boolean;
+    error: string | null;
+}
+
+export interface PaginationState {
+    currentPage: number;
+    totalPages: number;
+    itemsPerPage: number;
+    totalItems: number;
+}
+

@@ -1,0 +1,15 @@
+/* @import './base.css'; */
+
+#app {
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  padding-top: 60px;
+}
+
+.cropper {
+  clip-path: ellipse(65px 60px);
+}

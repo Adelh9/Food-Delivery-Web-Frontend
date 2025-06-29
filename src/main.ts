@@ -13,15 +13,39 @@ import './assets/main.css'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
 
+// Create the Vue application instance
 const app = createApp(App)
 
-app.use(createPinia())
+// Configure Pinia for state management
+const pinia = createPinia()
+app.use(pinia)
+
+// Configure Vue Router
 app.use(router)
-app.use(Notifications)
 
-app.component('StarRating', StarRating);
-app.component('Multiselect', Multiselect);
-app.component('Vue3BsPaginate', Vue3BsPaginate);
+// Configure notifications system
+app.use(Notifications, {
+    position: 'bottom right',
+    duration: 4000,
+    pauseOnHover: true
+})
 
+// Register global components
+app.component('StarRating', StarRating)
+app.component('Multiselect', Multiselect)
+app.component('Vue3BsPaginate', Vue3BsPaginate)
 
+// Global error handler for better debugging
+app.config.errorHandler = (err, instance, info) => {
+    console.error('Global error:', err)
+    console.error('Component:', instance)
+    console.error('Info:', info)
+}
+
+// Performance optimization: enable production mode warnings
+if (import.meta.env.PROD) {
+    app.config.warnHandler = () => null
+}
+
+// Mount the application
 app.mount('#app')

@@ -1,46 +1,96 @@
-# delivery
+# Food Delivery Web Frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+A modern Vue 3 + TypeScript food delivery web application with authentication, cart management, and order processing features.
 
-## Recommended IDE Setup
+## 🚀 Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- **User Authentication**: Login, register, and profile management
+- **Dish Browsing**: Browse and search through available dishes
+- **Cart Management**: Add/remove items, quantity control
+- **Order Processing**: Complete purchase flow with order tracking
+- **Responsive Design**: Mobile-friendly interface
+- **TypeScript**: Full type safety throughout the application
 
-## Type Support for `.vue` Imports in TS
+## 🛠️ Tech Stack
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+- **Frontend**: Vue 3 with Composition API
+- **Language**: TypeScript
+- **Build Tool**: Vite
+- **State Management**: Pinia
+- **Routing**: Vue Router
+- **Styling**: CSS with modern design patterns
+- **Linting**: ESLint + Prettier
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## 📁 Project Structure
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+```
+src/
+├── api/           # API integration and types
+├── assets/        # Static assets (CSS, images)
+├── components/    # Reusable Vue components
+├── router/        # Vue Router configuration
+├── stores/        # Pinia state management
+└── views/         # Page components
+```
 
-## Customize configuration
+## 🚀 Getting Started
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+### Prerequisites
 
-## Project Setup
+- Node.js (v16 or higher)
+- npm or yarn
 
-```sh
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd food-delivery-web-frontend
+```
+
+2. Install dependencies:
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+4. Open your browser and navigate to `http://localhost:5173`
 
-```sh
-npm run build
-```
+## 📝 Available Scripts
 
-### Lint with [ESLint](https://eslint.org/)
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint for code quality
+- `npm run preview` - Preview production build locally
 
-```sh
-npm run lint
-```
+## 🏗️ Development
+
+### Branch Structure
+
+- `main` - Stable, production-ready code
+- `dev` - Main development branch
+- `feature/auth` - Authentication-related features
+- `feature/orders` - Cart and order-related features
+
+### Code Style
+
+This project uses ESLint and Prettier for consistent code formatting. Run `npm run lint` to check for any code style issues.
+
+## 🤝 Contributing
+
+1. Create a feature branch from `dev`
+2. Make your changes
+3. Ensure all tests pass and linting is clean
+4. Submit a pull request to the `dev` branch
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🆘 Support
+
+For support and questions, please open an issue in the repository.
